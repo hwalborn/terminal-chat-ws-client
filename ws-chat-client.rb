@@ -1,7 +1,7 @@
 require 'websocket-client-simple'
 require 'io/console'
 
-url = ARGV.shift || 'ws://192.168.1.8:8080'
+url = ARGV.shift || 'ws://192.168.5.68:8080'
 ws = WebSocket::Client::Simple.connect url
 
 ws.on :message do |msg|
