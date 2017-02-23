@@ -26,7 +26,9 @@ ws.on :error do |e|
 end
 
 loop do
-  #to see bits of what you are typing swap comment on following two lines
-  # ws.send gets
-  ws.send STDIN.noecho(&:gets)
+  #to hide terminal input
+  msg = gets
+  #don't disable this you naughty naughty its checking on the server side as well
+  ws.send msg if msg.to_s != "\n"
+  # ws.send STDIN.noecho(&:gets)
 end
