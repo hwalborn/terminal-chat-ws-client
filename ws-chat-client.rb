@@ -5,7 +5,8 @@ url = ARGV.shift || 'ws://192.168.5.68:8080'
 ws = WebSocket::Client::Simple.connect url
 
 ws.on :message do |msg|
-  # print "\r"
+  puts
+  print "\r"
   puts msg
 end
 
